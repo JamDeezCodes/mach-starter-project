@@ -5,6 +5,9 @@ const gpu = mach.gpu;
 pub const name = .app;
 pub const Mod = mach.Mod(@This());
 
+// Use experimental sysgpu graphics API
+pub const use_sysgpu = true;
+
 pub const systems = .{
     .init = .{ .handler = init },
     .after_init = .{ .handler = afterInit },
